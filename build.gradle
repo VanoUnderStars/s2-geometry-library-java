@@ -20,3 +20,12 @@ repositories {
 test {
     outputs.upToDateWhen { false }
 }
+
+
+test {
+    filter {
+        //include all integration tests
+        includeTestsMatching "*Test"
+    }
+}
+
