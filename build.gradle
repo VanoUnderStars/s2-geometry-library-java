@@ -5,14 +5,18 @@ plugins {
 }
 
 dependencies {
-    	testImplementation('junit:junit:3.8.2')
 	implementation("com.google.guava:guava:28.2-jre")
 	implementation("com.google.code.findbugs:jsr305")
+	testImplementation("junit:junit:3.8.2")
+  	testCompile 'junit:junit:3.8.2'
 }
-
 
 
 repositories {
     mavenCentral()
 }
 
+
+test {
+    outputs.upToDateWhen { false }
+}
